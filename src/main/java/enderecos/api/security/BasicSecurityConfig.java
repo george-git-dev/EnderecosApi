@@ -18,7 +18,14 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		auth.userDetailsService(service);
+		
+		/*metodo para autenticar login de usuario do banco de dados*/
+		/*auth.userDetailsService(service);*/
+		
+		
+		/*metodo para autenticar login de usuario em memoria*/
+		auth.inMemoryAuthentication()
+		.withUser("root").password(passwordEncoder().encode("root")).authorities("ROLE_ADMIN");
 		
 	}
 	
@@ -39,7 +46,7 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
  		.and().csrf().disable();
 	}
 	
-	
+
 	
 	
 	

@@ -1,8 +1,5 @@
 package enderecos.api.security;
 
-
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -14,15 +11,9 @@ import enderecos.api.repository.UsuarioRepository;
 
 import java.util.Optional;
 
-
-
-
-
-
-
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
-    
+
 	@Autowired
 	private UsuarioRepository userRepository;
 
@@ -34,8 +25,5 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
 		return usuario.map(UserDetailsImpl::new).get();
 	}
-	
-	
-	
-	
+
 }
