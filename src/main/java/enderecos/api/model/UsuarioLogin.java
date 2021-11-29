@@ -2,18 +2,12 @@ package enderecos.api.model;
 
 public class UsuarioLogin {
 
-	
-    private String usuario;
-	
+	private String usuario;
+
 	private String senha;
-	
+
 	private String token;
 
-	
-	
-	
-	
-	
 	public String getUsuario() {
 		return usuario;
 	}
@@ -37,10 +31,5 @@ public class UsuarioLogin {
 	public void setToken(String token) {
 		this.token = token;
 	}
-	
-	
-	
-	
-	
-		
+
 }
